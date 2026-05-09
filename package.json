@@ -1,0 +1,28 @@
+{
+  "name": "red-llm-server",
+  "version": "1.0.0",
+  "description": "Express API server for the Red LLM project",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node --watch app.js",
+    "frontend": "cd frontend/RED && npm run dev",
+    "ai": "concurrently -n \"BACKEND,FRONTEND\" -c \"red,blue\" \"npm run dev\" \"npm run frontend\"",
+    "ai:cli": ".venv\\Scripts\\python.exe src\\model\\inference.py",
+    "download-data": ".venv\\Scripts\\python.exe src\\data\\download_dataset.py"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.6.1",
+    "morgan": "^1.10.1",
+    "path": "^0.12.7",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

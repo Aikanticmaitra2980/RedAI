@@ -1,0 +1,69 @@
+/* =========================================================
+   RED AI — Global Design System
+   Dark-first, premium glassmorphism aesthetic
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* --- Tokens --- */
+:root {
+  --red:        #e53e3e;
+  --red-bright: #ff5252;
+  --red-glow:   rgba(229, 62, 62, 0.35);
+  --red-dim:    rgba(229, 62, 62, 0.12);
+
+  --bg:         #0a0a0f;
+  --bg-2:       #111118;
+  --bg-3:       #18181f;
+  --bg-4:       #1e1e28;
+
+  --glass:      rgba(255,255,255,0.04);
+  --glass-border: rgba(255,255,255,0.08);
+
+  --text:       #c8c8d8;
+  --text-muted: #6b6b80;
+  --text-bright:#f0f0ff;
+
+  --border:     rgba(255,255,255,0.07);
+
+  --font:       'Inter', system-ui, sans-serif;
+  --mono:       'JetBrains Mono', ui-monospace, monospace;
+
+  --radius:     12px;
+  --radius-lg:  20px;
+  --shadow-red: 0 0 40px rgba(229,62,62,0.2), 0 0 80px rgba(229,62,62,0.08);
+  --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Reset --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; font-family: var(--font); }
+input, textarea { font-family: var(--font); }
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-2); }
+::-webkit-scrollbar-thumb { background: var(--bg-4); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--red-dim); }
+
+/* #root fills the viewport — individual pages manage their own layout */
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body { margin: 0; }

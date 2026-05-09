@@ -1,0 +1,24 @@
+# Machine Learning & Deep Learning
+torch>=2.0.0
+transformers>=4.30.0
+accelerate>=0.20.3
+peft>=0.4.0
+bitsandbytes>=0.41.0
+datasets>=2.14.0
+mistral_inference
+mistral_common
+
+# Data Processing
+pandas
+numpy
+scikit-learn
+
+# Utilities
+tqdm
+pyyaml
+python-dotenv
+
+# Jupyter & Visualization
+notebook
+matplotlib
+wandb  # For experiment tracking
