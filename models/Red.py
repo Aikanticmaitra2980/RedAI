@@ -151,7 +151,7 @@ class Red:
 if __name__ == "__main__":
     # Test with default or mistral if path set
     m_path = os.getenv("MISTRAL_MODELS_PATH")
-    model_to_test = m_path if m_path and os.path.isdir(m_path) else "distilgpt2"
+    model_to_test = m_path if m_path and os.path.isdir(m_path) else "mistralai/Mistral-7B-Instruct-v0.3"
     
     try:
         with Red(model_to_test) as red:

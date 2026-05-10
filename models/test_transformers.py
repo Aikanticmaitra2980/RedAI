@@ -4,7 +4,7 @@ import torch
 def test_transformers():
     print("Testing transformers...")
     try:
-        model_name = "distilgpt2" # small and fast
+        model_name = "mistralai/Mistral-7B-Instruct-v0.3"
         print(f"Loading {model_name}...")
         tokenizer = tr.AutoTokenizer.from_pretrained(model_name)
         model = tr.AutoModelForCausalLM.from_pretrained(model_name)

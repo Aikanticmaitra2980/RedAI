@@ -15,7 +15,7 @@ const stats = [
 
 const quickActions = [
   { id: 'qa-chat',       label: 'Open Chat',      desc: 'Talk to RED AI model',        icon: '💬', route: '/chat' },
-  { id: 'qa-docs',       label: 'HF Model',       desc: 'View on Hugging Face',        icon: '📦', route: 'https://huggingface.co/distilgpt2', external: true },
+  { id: 'qa-docs',       label: 'HF Model',       desc: 'View on Hugging Face',        icon: '📦', route: 'https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3', external: true },
   { id: 'qa-api',        label: 'API Health',     desc: 'Check backend status',        icon: '🔍', route: 'http://localhost:5000/health', external: true },
 ];
 
@@ -109,13 +109,14 @@ export default function Dashboard({ user, onLogout }: Props) {
           <h2 className="dash-section-title">About RED</h2>
           <div className="about-card">
             <p>
-              <strong>RED</strong> is a local AI inference system built with{' '}
-              <code>DistilGPT-2</code> via Hugging Face Transformers, served through
-              an <code>Express 5</code> API, and displayed in this React 19 + Vite frontend.
+              <strong>RED</strong> is a local AI inference system powered by{' '}
+              <code>Mistral 7B Instruct</code> via the <code>mistral_inference</code> library
+              (with Hugging Face Transformers as fallback), served through an{' '}
+              <code>Express 5</code> API, and displayed in this React 19 + Vite frontend.
             </p>
             <p>
               Send prompts from the <strong>Chat</strong> page and RED will generate
-              text responses using your local model pipeline.
+              text responses using the Mistral 7B local model pipeline.
             </p>
           </div>
         </section>

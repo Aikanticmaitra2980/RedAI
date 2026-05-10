@@ -69,10 +69,10 @@ npm run ai
 
 ## 🤖 Model Integration
 
-The system uses `distilgpt2` by default for fast local inference. To use Mistral:
-1. Download Mistral weights.
-2. Set `MISTRAL_MODELS_PATH` in `.env`.
-3. The system will automatically detect and switch to the Mistral engine.
+The system defaults to **`mistralai/Mistral-7B-Instruct-v0.3`** (via Hugging Face Transformers, with optional 4-bit quantization on CUDA). For maximum performance using local weights:
+1. Download the Mistral 7B weights locally.
+2. Set `MISTRAL_MODELS_PATH=/path/to/weights` in `.env`.
+3. The system will automatically detect the local folder and switch to the native `mistral_inference` engine.
 
 ---
 Built with ❤️ by Antigravity.
